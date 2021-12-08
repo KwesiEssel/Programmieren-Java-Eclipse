@@ -1,0 +1,42 @@
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.Set;
+
+public class Einkaufsliste {
+	
+	static HashMap <String, String> dict;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		HashMap <String, String> einkaufen = new HashMap <String, String>();
+		Boolean vergeben = false;
+		einkaufen.put("Avocado", "3");
+		einkaufen.put("Eier", "4");
+		einkaufen.put("Brot", "2");
+		einkaufen.put("Butter", "5");
+		einkaufen.put("Wasser", "6");
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Bitte geben Sie ihre Veränderung ein: ");
+		String key= scanner.nextLine();
+		System.out.println("Bitte geben Sie ihre Veränderung ein: ");
+		String value= scanner.nextLine();
+		
+		if((value).equals(value)) {
+			System.out.println(einkaufen.replace(key, value));
+            vergeben = true;
+		}
+		else {
+			System.out.println(key + " : " + value);
+		}
+  
+		Set<String> e = einkaufen.keySet();
+		for (String lebensmittel : e) {
+			System.out.println(lebensmittel + " : " + einkaufen.get(lebensmittel));
+		
+		}
+
+	}
+
+}
