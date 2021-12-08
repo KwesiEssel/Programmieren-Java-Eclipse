@@ -1,0 +1,110 @@
+import java.util.Scanner;
+
+public class clicks {
+	
+	int summand, summand2, summe;
+	int subtrahend, minuend, differenz;
+	int faktor, faktor1, produkt;
+	double dividend, divisor, quotient;
+	public String tastenwahl;
+	
+	
+	
+	
+	public clicks(int summand, int summand2, int summe, int subtrahend, int minuend, int differenz, int faktor,
+			int faktor1, int produkt, double dividend, double divisor, double quotient, String tastenwahl) {
+		super();
+		this.summand = summand;
+		this.summand2 = summand2;
+		this.summe = summe;
+		this.subtrahend = subtrahend;
+		this.minuend = minuend;
+		this.differenz = differenz;
+		this.faktor = faktor;
+		this.faktor1 = faktor1;
+		this.produkt = produkt;
+		this.dividend = dividend;
+		this.divisor = divisor;
+		this.quotient = quotient;
+		this.tastenwahl = tastenwahl;
+	}
+
+	public clicks(int i, int j, int k) {
+		// TODO Auto-generated constructor stub
+		
+	}
+
+	public void wahl() {
+		String input, given = "a";
+		String input1, given1 = "s";
+		String input2, given2 = "m";
+		String input3, given3 = "d";
+		Scanner myScan = new Scanner (System.in);
+		
+		System.out.println("(A)ddieren, (S)ubtrahieren, (M)ultiplizieren oder (D)ividieren " + /*given +*/ ": ");
+		input= myScan.next();
+		input1= myScan.next();
+		input2= myScan.next();
+		input3=myScan.next();
+		//myScan.close();
+		
+		if (input.equals(given)) {
+			addieren();
+		}
+		if (input1.equals(given1)) {
+			subtrahieren();
+		}
+		if (input2.equals(given2)) {
+			multiplizieren();
+		}
+		if (input3.equals(given3)) {
+			dividieren();
+		}
+		else{
+			System.out.println("Falsche Eingabe");
+		}
+		
+	}
+
+	public void addieren() {
+		Scanner scanner = new Scanner (System.in);
+		System.out.println("Erste Zahl: ");
+		summand= scanner.nextInt();
+		System.out.println("Zweite Zahl: ");
+		summand2 = scanner.nextInt();
+		summe= summand+ summand2;
+		System.out.println("Das Ergebnis der Addition: " + summe);
+		
+		}
+	public void subtrahieren() {
+		Scanner scanner = new Scanner (System.in);
+		System.out.println("Erste Zahl: ");
+		subtrahend= scanner.nextInt();
+		System.out.println("Zweite Zahl: ");
+		minuend = scanner.nextInt();
+		differenz = subtrahend - minuend;
+		System.out.println("Das Ergebnis der Subtraktion: " + differenz);
+	}
+	
+	public void multiplizieren() {
+		Scanner scanner = new Scanner (System.in);
+		System.out.println("Erste Zahl: ");
+		faktor= scanner.nextInt();
+		System.out.println("Zweite Zahl: ");
+		faktor1 = scanner.nextInt();
+		produkt = faktor *  faktor1;
+		System.out.println("Das Ergebnis der Multiplikation: " + produkt);
+	}
+	
+	public void dividieren() {
+		Scanner scanner = new Scanner (System.in);
+		System.out.println("Erste Zahl: ");
+		dividend= scanner.nextDouble();
+		System.out.println("Zweite Zahl: ");
+		divisor = scanner.nextDouble();
+		quotient = dividend / divisor;
+		System.out.println("Das Ergebnis der Division: " + quotient);
+	}
+	
+
+}
