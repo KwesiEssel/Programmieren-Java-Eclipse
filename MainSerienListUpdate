@@ -1,0 +1,41 @@
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Scanner;
+
+
+
+public class MainSerienListUpdate {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String serienname = "Test";
+		int staffel= 0;
+		int folgen = 0;
+		
+		SerienListUpdate liste = new SerienListUpdate (serienname, staffel, folgen);
+		HashSet<SerienListUpdate> serien = new HashSet<SerienListUpdate>();
+		
+		Scanner scanner = new Scanner (System.in);
+		System.out.println("Serienname: ");
+		String s = scanner.nextLine();
+		liste.serienname = s;
+		
+		
+		
+		System.out.println("Staffel: ");
+		int st = scanner.nextInt();
+		liste.staffel =st;
+		
+		System.out.println("Folgen: ");
+		int f = scanner.nextInt();
+		liste.folgen = f;
+		liste.check();
+		
+		System.out.println(liste.serienname);
+		
+
+	}
+
+}
