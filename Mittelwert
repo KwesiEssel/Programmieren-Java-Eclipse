@@ -1,0 +1,34 @@
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class Mittelwert {
+	
+	public static void main (String [] args ) {
+		
+		LinkedList <String> mittelwertList = new LinkedList<>();
+		
+		String eingabeWert = "";
+		double mittelwert = 0; 
+		double sum = 0;
+		
+		Scanner scanner = new Scanner(System.in);
+		while(!eingabeWert.equals("quit")) {
+			System.out.println("Bitte einen Wert eingeben: ");
+			eingabeWert = scanner.nextLine();
+			
+			if(eingabeWert.equals("quit")) {
+				break;
+			}
+			mittelwertList.add(eingabeWert);
+			
+		}
+		System.out.println("mittelwertList");
+		
+		for (String summe:mittelwertList) {
+			sum += Double.parseDouble(summe);
+		}
+		mittelwert= sum/mittelwertList.size();
+		System.out.println("Mittelwert: " +mittelwert);
+	}
+	
+}
