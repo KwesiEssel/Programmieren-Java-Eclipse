@@ -1,0 +1,43 @@
+public class SerienListUpdate {
+	
+	String serienname;
+	int staffel;
+	int folgen;
+	
+	
+	public SerienListUpdate(String serienname, int staffel, int folgen) {
+		super();
+		this.serienname = serienname;
+		this.staffel = staffel;
+		this.folgen = folgen;
+	}
+	
+	public String getSerienname() {
+		return serienname;
+	}
+	public void setSerienname(String serienname) {
+		this.serienname = serienname;
+	} 
+	public int getStaffel() {
+		return staffel;
+	}
+	public void setStaffel(int staffel) {
+		this.staffel = staffel;
+	}
+	public int getFolgen() {
+		return folgen;
+	}
+	public void setFolgen(int folgen) {
+		this.folgen = folgen;
+	}
+	
+	public void check () {
+		if (getSerienname() == (serienname)) {
+			System.out.println("Die Serie hast du schon hier gespeichert");
+		}	
+		else {
+			System.out.println("Die Serie ist neu");
+		}
+	
+	}
+}
