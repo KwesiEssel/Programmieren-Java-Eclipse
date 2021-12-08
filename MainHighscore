@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+
+import java.util.Collections;
+import java.util.List;
+
+public class HighscoreMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<Highscore> highscores = new ArrayList<>();
+		highscores.add(new Highscore ("Kaluuya", 600));
+		highscores.add(new Highscore ("Michael", 150));
+		highscores.add(new Highscore ("Ryan", 520));
+		highscores.add(new Highscore ("Wolf", 230));
+		highscores.add(new Highscore ("Lucas", 210));
+		highscores.add(new Highscore ("Covid", 50));
+		
+		Collections.sort(highscores);
+		
+		for (Highscore score : highscores) {
+			System.out.println(score.getName() +":\t" + score.getPoints());
+		}
+	}
+	
+
+}
